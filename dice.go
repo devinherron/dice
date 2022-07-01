@@ -7,13 +7,14 @@ import (
 	"math/rand"
 )
 
-// func Roll() {
-// 	var src cryptoSource
-// 	rnd := rand.New(src)
-// 	fmt.Println(rnd.Intn(5) + 1) // a truly random number 1 to 6
-// }
+func Roll(size int) int {
+	var src cryptoSource
+	rnd := rand.New(src)
 
-func Roll(size int, number int) ([]int, int) {
+	return rnd.Intn(size) + 1
+}
+
+func RollMulti(size int, number int) ([]int, int) {
 	var sum int
 	results := []int{}
 

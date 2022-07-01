@@ -7,7 +7,9 @@ import (
 )
 
 func main() {
-	results, sum := dice.Roll(10, 1)
+	results, sum := dice.RollMulti(10, 2)
 	fmt.Println(results)
 	fmt.Println(sum)
+	result := dice.Roll(6)
+	fmt.Println(result)
 }
